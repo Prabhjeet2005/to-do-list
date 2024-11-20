@@ -17,7 +17,9 @@ const page = () => {
 	};
 
 	let renderTask = (
-		<h2 className="text-center text-slate-600 mt-3 text-4xl ">No Tasks Pending</h2>
+		<h2 className="text-center text-slate-600 mt-3 text-4xl ">
+			No Tasks Pending
+		</h2>
 	);
 
 	if (MainTask.length > 0) {
@@ -26,7 +28,9 @@ const page = () => {
 				<div
 					key={i} //This is Important
 					className="flex flex-col p-3 justify-between items-center min-h-44 w-64 rounded-3xl m-10 bg-zinc-800">
-          <div className="text-3xl font-semibold"> {i+1}. {e.Title}</div>
+					<div className="text-3xl font-semibold">
+						(Task {i + 1}) <div className="text-center">{e.Title}</div>
+					</div>
 					<div className="text-left pt-1 pb-3 text-lg min-w-full">{e.Desc}</div>
 					<div className="flex w-full justify-evenly">
 						<button
@@ -49,21 +53,23 @@ const page = () => {
 				</div>
 			);
 		});
-  }
-  
-  let completeTask = (
-		<h2 className="text-center text-slate-600 mt-3 text-4xl ">No Tasks Completed</h2>
-  );
+	}
 
-  if (Complete.length > 0) {
-    completeTask = Complete.map((e, i) => {
+	let completeTask = (
+		<h2 className="text-center text-slate-600 mt-3 text-4xl ">
+			No Tasks Completed
+		</h2>
+	);
+
+	if (Complete.length > 0) {
+		completeTask = Complete.map((e, i) => {
 			return (
 				<div
 					key={i} //This is Important
 					className="flex flex-col p-3 justify-between items-center min-h-44 w-64 rounded-3xl m-10 bg-zinc-800">
 					<div className="text-3xl font-semibold">
 						{" "}
-						{i + 1}. {e.Title}
+						{e.Title}
 					</div>
 					<div className="text-left pt-1 pb-3 text-lg min-w-full">{e.Desc}</div>
 					<div className="flex w-full justify-evenly">
@@ -79,12 +85,12 @@ const page = () => {
 				</div>
 			);
 		});
-  }
-	const deleteComplete = (i) => {
-		let copyTask = [...Complete]
-		copyTask.splice(i, 1)
-		setComplete(copyTask)
 	}
+	const deleteComplete = (i) => {
+		let copyTask = [...Complete];
+		copyTask.splice(i, 1);
+		setComplete(copyTask);
+	};
 
 	const deleteHandler = (i) => {
 		let copyTask = [...MainTask];
@@ -93,9 +99,9 @@ const page = () => {
 	};
 
 	const completeHandler = (i) => {
-    let copyTask = [...MainTask];
-    let [a] = copyTask.splice(i, 1)
-		setComplete([...Complete, a ]);
+		let copyTask = [...MainTask];
+		let [a] = copyTask.splice(i, 1);
+		setComplete([...Complete, a]);
 		setMainTask(copyTask);
 	};
 
@@ -128,14 +134,14 @@ const page = () => {
 						Add Task
 					</button>
 				</div>
-      </form>
-      
+			</form>
+
 			<hr className="border-zinc-700" />
 			<div className="text-center m-4 text-3xl">Tasks Pending</div>
 			<div className="m-2 flex  flex-wrap mt-5">{renderTask}</div>
-			
-      <hr className="border-zinc-700" />
-      <div className="text-center text-green-500 m-4 text-3xl">
+
+			<hr className="border-zinc-700" />
+			<div className="text-center text-green-500 m-4 text-3xl">
 				Completed Tasks
 			</div>
 			<div className="m-2 flex  flex-wrap mt-5">{completeTask}</div>
