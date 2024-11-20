@@ -1,4 +1,13 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Project Link:-
+```
+https://todolist-50pkurs98-prabhjeet2005s-projects.vercel.app/
+```
+
+
+
+
+
+## Getting Started
 
 Installation
 Clone the repository:
@@ -9,9 +18,7 @@ Navigate to the project directory:
 ```
 cd to-do-list
 ```
-
-## Getting Started
-First, Open Terminal.  
+Open Terminal. 
 Then, Install the dependencies:
 ```
 npm install
