@@ -1,7 +1,7 @@
-## Project Link: (https://todolist-7lc070j88-prabhjeet2005s-projects.vercel.app)
+## Project Link: (https://todolist-flame-theta.vercel.app/)
 
 ```
-https://todolist-7lc070j88-prabhjeet2005s-projects.vercel.app
+https://todolist-flame-theta.vercel.app/
 ```
 
 
